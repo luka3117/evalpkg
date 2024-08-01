@@ -1,0 +1,6 @@
+library(tidyverse)
+eval::calculate_row_mean(iris)
+
+eval::calculate_row_sum(iris)
+
+system("open .")
