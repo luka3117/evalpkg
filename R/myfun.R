@@ -27,3 +27,12 @@ calculate_row_sum <- function(data) {
     mutate(row_sum = sum(c_across(where(is.numeric)), na.rm = TRUE)) %>%
     ungroup()
 }
+
+
+calculate_row_max <- function (data)
+{
+  data %>% rowwise() %>% mutate(row_nax = max(c_across(where(is.numeric)),
+                                              na.rm = TRUE)) %>% ungroup()
+}
+
+
