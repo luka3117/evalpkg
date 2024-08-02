@@ -65,3 +65,10 @@ typing_convert_to_range <- function(x) {
 }
 
 
+convert_na_zero_only <-function (data)
+{
+  data %>% mutate(across(where(is.numeric), ~if_else(is.na(.),
+                                                     0, .)))
+}
+
+
