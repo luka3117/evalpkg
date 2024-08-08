@@ -71,4 +71,10 @@ convert_na_zero_only <-function (data)
                                                      0, .)))
 }
 
+convert_grade_factor_order <- function(x) {
+
+  factor(x,
+         levels = c("秀", "優", "良", "可", "不可", "不可(放棄)"),
+         ordered = TRUE)
+}
 
