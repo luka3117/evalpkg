@@ -78,3 +78,17 @@ convert_grade_factor_order <- function(x) {
          ordered = TRUE)
 }
 
+
+
+convert_score_to_grade<- function(x) {
+  case_when(
+    # x == 100 ~ 1,
+    x >= 90 & x <= 100 ~ "秀",
+    x >= 80 & x < 90 ~ "優",
+    x >= 70 & x < 80 ~ "良",
+    x >= 60 & x < 70 ~ "可",
+    x >= 0 & x < 60 ~ "不可"
+    # ,
+    # TRUE ~ 0
+  )
+}
